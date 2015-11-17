@@ -19,6 +19,7 @@ libvirt_vm_vcpu: 1 # number of cores designated to the VM
 libvirt_vm_vcpu_placement: 'static' # options 'auto', 'static', defaults to 'numatune'
 libvirt_vm_vcpu_cpuset: [] # list of host CPU numbers the VM can run on
 libvirt_vm_networks: ['default'] # libvirts id of networks this VM is part of
+libvirt_vm_networks_bridged: [] # bridges this VM is part of
 libvirt_vm_disk_size: "12G" # use this to change first disk size
 libvirt_vm_features: ['acpi', 'apic', 'pae'] # vm features available
 

@@ -67,6 +67,12 @@
       <model type='virtio'/>
     </interface>
 {% endfor %}
+{% for bridge in libvirt_vm_networks_bridged | default([]) %}
+    <interface type='bridge'>
+      <source bridge='{{ bridge }}'/>
+      <model type='virtio'/>
+    </interface>
+{% endfor %}
     <serial type='pty'>
       <target port='0'/>
     </serial>
