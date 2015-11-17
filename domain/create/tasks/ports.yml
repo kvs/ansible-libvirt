@@ -29,6 +29,7 @@
           if (ansible_local is defined)
             and (ansible_local.libvirt is defined)
             and (ansible_local.libvirt.facts is defined)
+            and (ansible_local.libvirt.facts.ssh_port is defined)
           else
         libvirt_ssh_base_port
       }}
