@@ -3,6 +3,7 @@
   shell: >
     virsh dumpxml {{ libvirt_result_domain_name }}
     | grep 'mac address'
+    | head -1
     | cut -f 2 -d "'"
   changed_when: no
   register: extract_mac_address_result
